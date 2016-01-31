@@ -76,10 +76,10 @@ Partial Class Main
         '
         Me.ContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlwaysTop, Separator1, Me.MiniMode, Separator2, Me.AutoStart, Me.StartupLaunch, Separator3, Me.AboutProgram})
         Me.ContextMenuStrip.Name = "ContextMenuStrip"
-        Me.ContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.ContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
         Me.ContextMenuStrip.ShowCheckMargin = True
         Me.ContextMenuStrip.ShowImageMargin = False
-        Me.ContextMenuStrip.Size = New System.Drawing.Size(321, 132)
+        Me.ContextMenuStrip.Size = New System.Drawing.Size(321, 154)
         '
         'AlwaysTop
         '

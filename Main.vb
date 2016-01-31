@@ -29,7 +29,7 @@
 
     Private Sub AboutProgram_Click(sender As Object, e As EventArgs) Handles AboutProgram.Click
 
-        MsgBox("")
+        MsgBox("Made by Jason Kwok" & vbCrLf & "Icon from IconFinder.com" & vbCrLf & vbCrLf & "The program is under the MIT License", MsgBoxStyle.OkOnly, "About Useless Clock")
 
     End Sub
 
