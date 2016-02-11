@@ -128,7 +128,6 @@
     <None Include="Resources\Studio.png" />
     <None Include="Resources\Time.ico" />
     <None Include="Resources\Time.png" />
-    <Content Include="Time %28Icon%29.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

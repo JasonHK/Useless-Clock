@@ -10,20 +10,7 @@
         '設定預設圖片
         LogoPictureBox.Image = My.Resources.StudioLogo
 
-        If My.Settings.AutoStart = True Then
-            StartStop()
-            AutoStart.Checked = True
-        ElseIf My.Settings.AutoStart = False Then
-            AutoStart.Checked = False
-        End If
-
-        If My.Settings.AlwaysTop = True Then
-            TopMost = True
-            AlwaysTop.Checked = True
-        ElseIf My.Settings.AlwaysTop = False Then
-            TopMost = False
-            AlwaysTop.Checked = False
-        End If
+        LoadSettings()
 
     End Sub
 
@@ -82,6 +69,29 @@
 
     End Sub
 
+    Sub LoadSettings()
+
+        If My.Settings.AutoStart = True Then
+            StartStop()
+            AutoStart.Checked = True
+        ElseIf My.Settings.AutoStart = False Then
+            AutoStart.Checked = False
+        End If
+
+        If My.Settings.AlwaysTop = True Then
+            AlwaysTop.Checked = True
+        ElseIf My.Settings.AlwaysTop = False Then
+            AlwaysTop.Checked = False
+        End If
+
+        If My.Settings.StartupLaunch = True Then
+            StartupLaunch.Checked = True
+        ElseIf My.Settings.StartupLaunch = False Then
+            StartupLaunch.Checked = False
+        End If
+
+    End Sub
+
     Private Sub AutoStart_CheckedChanged(sender As Object, e As EventArgs) Handles AutoStart.CheckedChanged
 
         If AutoStart.Checked = True Then
@@ -100,6 +110,18 @@
         ElseIf AlwaysTop.Checked = False Then
             TopMost = False
             My.Settings.AlwaysTop = False
+        End If
+
+    End Sub
+
+    Private Sub StartupLaunch_CheckedChanged(sender As Object, e As EventArgs) Handles StartupLaunch.CheckedChanged
+
+        If StartupLaunch.Checked = True Then
+            My.Computer.Registry.LocalMachine.OpenSubKey("HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).SetValue(Application.ProductName, Application.ExecutablePath)
+            My.Settings.StartupLaunch = True
+        ElseIf StartupLaunch.Checked = False Then
+            My.Computer.Registry.LocalMachine.OpenSubKey("HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).DeleteValue(Application.ProductName)
+            My.Settings.StartupLaunch = False
         End If
 
     End Sub

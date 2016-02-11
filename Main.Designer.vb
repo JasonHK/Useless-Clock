@@ -79,7 +79,7 @@ Partial Class Main
         Me.ContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
         Me.ContextMenuStrip.ShowCheckMargin = True
         Me.ContextMenuStrip.ShowImageMargin = False
-        Me.ContextMenuStrip.Size = New System.Drawing.Size(321, 154)
+        Me.ContextMenuStrip.Size = New System.Drawing.Size(321, 132)
         '
         'AlwaysTop
         '
@@ -107,7 +107,6 @@ Partial Class Main
         'StartupLaunch
         '
         Me.StartupLaunch.CheckOnClick = True
-        Me.StartupLaunch.Enabled = False
         Me.StartupLaunch.Name = "StartupLaunch"
         Me.StartupLaunch.Size = New System.Drawing.Size(320, 22)
         Me.StartupLaunch.Text = "Launch the program when Windows startup"

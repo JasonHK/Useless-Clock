@@ -77,6 +77,18 @@ Namespace My
                 Me("AlwaysTop") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property StartupLaunch() As Boolean
+            Get
+                Return CType(Me("StartupLaunch"),Boolean)
+            End Get
+            Set
+                Me("StartupLaunch") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
